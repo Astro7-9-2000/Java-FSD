@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+</head>
+
+<body>
+    <h1>Student Details</h1>
+    <form method = "get" action = "/success.html">
+        FirstName = <input type="text" name="firstname" id="fname" required placeholder="Enter your Firstname" />
+        <br>
+        <br>
+        LastName = <input type="text" name="lastname" id="lname" required placeholder="Enter your Lastname" />
+        <br>
+        <br>
+        City:
+        <select name="select your city">
+            <br>
+            <option>Select your city</option>
+            <option>Nagpur</option>
+            <option>Amravati</option>
+            <option>Pune</option>
+            <option>Bengaluru</option>
+            <option>Mumbai</option>
+        </select>
+        <br>
+        <br>
+
+        Roll No : <input type="number" name="rollno" id="r_no" required />
+        <br>
+        <br>
+        DOB : <input type="date" name="dob" id="dob" required />
+        <br>
+        <br>
+        Email : <input type="email" name="email" id="email" required />
+        <br>
+        <br>
+        Mobile_No : <input type="number" name="mobno" id="mobno" required />
+        <br>
+        <br>
+        Admission Date : <input type="date" required id="adate" />
+        <br />
+        <br />
+        Subjects :
+        Java <input type="checkbox" id="java" />
+        HTML <input type="checkbox" id="html" />
+        React <input type="checkbox" id="react" />
+        python <input type="checkbox" id="python" />
+        PHP <input type="checkbox" id="php" />
+        <br />
+        <br />
+        Gender :
+        <input type="radio" id="gender" value "Female"/>Female
+        <input type="radio" id="gender" value "Male"/>Male
+        <input type="radio" id="gender" value "Other"/>Other
+        <br>
+        <br>
+        Username : <input type="text" id="username"/><br/>
+        <br />
+        Password : <input type="password" id="pass"/><br/>
+        <br />
+        Feedback : <textarea rows="3" cols="30" id="feedback">
+        </textarea>
+        <br/>
+        <br/>
+
+        <button class="Submit Button">Submit</button><br>
+        <form />
+</body>
+
+</html>

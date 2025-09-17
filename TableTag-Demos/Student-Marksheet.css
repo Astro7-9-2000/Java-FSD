@@ -1,0 +1,13 @@
+body{
+    background-color:cornsilk;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+table{
+    border-collapse: collapse;
+}
+thead th{
+    background-color: aquamarine;
+}
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descendent Selector Demo</title>
+    <style>
+        /* The descendant combinator matches all elements that are descendants (children, grandchildren, etc.) 
+        of a specified element.*/
+        div p {
+            background-color: darkgoldenrod;
+        }
+
+        div h1 {
+            font-style: italic;
+            color: coral;
+        }
+
+        /* Child Selector */
+        ul li {
+            list-style-type: square;
+        }
+
+        /* General Sibling Selector :- The general sibling selector in CSS, denoted by the tilde symbol (~), 
+     selects all elements that are siblings of a specified element and share the same parent, regardless of whether they are immediately adjacent.*/
+        h3~p {
+            background-color: darkseagreen;
+        }
+
+        /* Adjacent Selector:- The adjacent sibling selector in CSS targets an element that immediately follows another specified element, sharing the same parent. 
+        It is represented by the plus sign (+). */
+        h2 +p {
+            background-color: chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>This is head 1</h1>
+        <h2>This is head 2</h2>
+        <h3>This is head 3</h3>
+        <p>This is Para 1</p>
+        <p>This is Para 2</p>
+        <p>This is Para 3</p>
+    </div>
+    <p>This is outside div para</p>
+    <h1>This is head outside div</h1>
+
+    <!-- Child Selector :- The child combinator selects all elements that are direct children of a specified element.-->
+
+    Programming Languages :
+
+    <ul>
+        <li>Java</li>
+        <li>C++</li>
+        <li>Python</li>
+        <li>.NET</li>
+        <li>Angular</li>
+        <li>React</li>
+    </ul>
+
+    <!-- General Sibling Selector -->
+    <h3>
+        This is a simple h3 tag</h3>
+    <div>
+        <p>This is para 1 inside the h3 tag</p>
+    </div>
+    <p>This is para 2 inside the h3 tag</p>
+
+    <!-- Adjacent Selector -->
+     <h2>This is head-2 tag</h2>
+     <p>This para is after head 2</p>
+     <p>This is para1 after head2</p>
+     <p>This is para 2 next to para 1</p>
+</body>
+
+</html>

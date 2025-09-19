@@ -1,0 +1,53 @@
+.contentheading{
+    background-color: greenyellow;
+    /*text-shadow: 5px 12px 5px grey;*/
+    margin:20px;
+    padding: 20px;
+    text-align: center;
+    border: 0.5px solid;
+    box-shadow: 2px 2px 5px 3px lightgreen;
+}
+
+body{
+    background-color: white;
+    /* background-image: url(../Images/butterfly_img.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-repeat: repeat-y; */
+    /* background-size: cover; */
+    background-position: center;
+}
+
+.aws {
+    position: relative;
+    
+}
+
+section{
+    border: 1px solid black;
+    width: 20%;
+    margin: 25px;
+    padding: 20px;
+    text-align: center;
+    background-color: lightgrey;
+
+    img {
+        margin: 5px;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0px 0px 5px 3px gray;
+        border-radius: 50%;
+    }
+
+    #new{
+        background-color: red;
+        height: 50px;
+        width: 50px;
+        top: 0%;
+        right: 0%;
+        font-size: 20px;
+        font-weight: bold;
+        color: whitesmoke;
+        border-bottom-left-radius: 10px;
+        position: absolute;
+    }
+}

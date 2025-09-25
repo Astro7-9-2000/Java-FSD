@@ -1,0 +1,98 @@
+nav{
+    display: flex;
+    width : 75%;
+    position: absolute;
+    top: 0;
+    padding: 20x 0;
+    color: white;
+    justify-content: right;
+}
+
+ nav .logo{
+    font-size: 35px;
+    color: lightgray;
+    font-weight: 600;
+    margin-right: 40px;
+}
+
+nav ul {
+    align-items: center;
+    margin: 20px;
+    padding: 0;
+    display: flex; 
+}
+
+nav ul li {
+    margin-left: 40px;
+    color: white; 
+}
+
+nav ul li a {
+    color: white; 
+    text-decoration: none;
+}
+
+.videohighlight{
+position: absolute;
+right: 0;
+bottom: 0;
+z-index: -1;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.gcontent {
+    text-align: center;
+    
+}
+.gcontent h1 {
+    font-size: 120px;
+    font-weight: 20px;
+    color:azure;
+    margin-top: 10%;
+}
+
+.gheading {
+    color:azure;
+    text-align: center;
+    border: 1px solid  lightcyan;
+    border-radius: 10%;
+    height: 200px;
+    margin: 40px;
+    width: 1000px;
+}
+
+.gimg_div_flex_props{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.gimg_div_flex_props > div{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    width: 80px;
+    height: 80px;
+    transition: ease-in-out 2s;
+    overflow: hidden;
+}
+
+div img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.flexbox:hover{
+    flex-grow: 1;
+    flex-basis: 10%;
+}
+
+.section_align {
+    align-items: center;
+    justify-items: center;
+}
+
+

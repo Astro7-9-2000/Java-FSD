@@ -1,0 +1,27 @@
+<script>
+    let currency;
+    let value;
+    let total = 0;
+
+    while (true){
+        currency = (prompt("Currency is present Enter Y: "));
+
+    if (currency == "Y") 
+    {
+        value = parseInt(prompt("Enter the Note Amount: "))
+        if (value == 10 || value == 20 || value == 50 || value == 100 || value == 500) {
+            console.log(value + "Real Currency");
+            total = total + value;
+        }
+        else {
+            console.log("Fake Currency")
+        }
+    }
+    else {
+        break;
+    }
+}
+
+    console.log(total);
+
+</script>

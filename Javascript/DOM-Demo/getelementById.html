@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById</title>
+</head>
+<body>
+
+    <div id="div1">This is a div tag.</div>
+    <p id="p1">This is a paragraph tag.</p>
+    <h2> This is a heading-2</h2>
+    <h2>This is heading too.</h2>
+    <h2>I am also heading.</h2>
+    <h3>This is a heading-3 </h3>
+
+    <script>
+        let ele1 = document.getElementById("div1");
+        ele1.style.color = 'red';
+
+        let ele2 = document.getElementById('p1');
+        ele2.style.backgroundColor = "green";
+
+        let h2array = document.getElementsByTagName('h2');
+        // h2array[0].style.color="blue";
+        // h2array[1].style.fontSize='larger';
+        // h2array[2].style.fontFamily='Courier New';
+
+        for (let i = 0; i <= h2array.length; i++) {
+            h2array[i].style.color = 'blue';
+        }
+        // h2array.forEach(htag => {htag.style.color='orange'});// need to check
+
+    </script>
+</body>
+
+</html>

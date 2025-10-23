@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbling Demo</title>
+</head>
+
+<body>
+    <div id="grandparent"> Grand Parent Div Tag
+        <button>Grand Parent Click</button>
+        <div id="parent">Parent Div tag
+            <button id="parent">Parent Click</button>
+            <div id="child">Child div tag
+                <button>Child Click</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('child').addEventListener('click', (event) => {
+        alert("Msg from parent --> child button clicked");
+        event.stopPropagation();
+        event.preventDefault();
+
+    })
+
+    document.getElementById('parent').addEventListener('click', (event) => {
+        alert("Msg from parent --> parent button clicked");
+    })
+
+    document.getElementById('grandparent').addEventListener('click', (event) => {
+        alert("Msg from grandparent --> grandparent button clicked");
+    })
+</script>
+</html>

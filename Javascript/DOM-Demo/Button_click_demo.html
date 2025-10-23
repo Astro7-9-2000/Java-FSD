@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Click Demo</title>
+</head>
+<body>
+    username : <input type="text" id="user">
+    <button onclick="welcome()" >Click Here</button>
+    <script>
+        let id= "Good morning";
+        let uname = document.getElementById('user');
+        function welcome()
+        {
+            alert(`${uname.value} ${id} `+" Welcome to JavaScript programming");
+        }
+    </script>
+</body>
+</html>

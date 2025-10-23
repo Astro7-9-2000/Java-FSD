@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+
+<body>
+    <div id="grandparent">
+        <form id="login-form">
+            <label for="uname">Username:-</label>
+            <input type = "text" , id = "txtname" , required , placeholder="Enter your name">
+            <br>
+            <br>
+            <label for="upass">Password:-</label>
+            <input type = "password" , id = "txtpass" , required , placeholder="Enter your password">
+        </form>
+    </div>
+    <script>
+        document.getElementById("login-form")
+            .addEventListener('focus', (event) => {
+                event.target.style.background = 'yellow';
+            } , true)
+
+            document.getElementById("Login form")
+            .addEventListener('blur' , (event) => {
+        event.target.style.background = 'lightblue';} ,  true);
+    </script>
+</body>
+
+</html>

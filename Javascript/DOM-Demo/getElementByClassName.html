@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementByClassName</title>
+</head>
+<body>
+    <div class="highlight">This is a first div tag.</div>
+    <div class="highlight">This is a second div tag.</div>
+</body>
+
+    <script>
+        let highlight_eles =  document.getElementsByClassName('highlight');
+        highlight_eles[0].style.color="yellow";
+        highlight_eles[1].style.color='pink';
+
+        for(i=0;i<highlight_eles.length;i++)
+        {
+            highlight_eles[i].style.backgroundColor='red';
+            highlight_eles[i].style.fontFamily='Courier New';
+        }
+
+    </script>
+</html>

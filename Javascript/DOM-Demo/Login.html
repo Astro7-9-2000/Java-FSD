@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    Username : <input type="text" id="user">
+    <br>
+    <br>
+    Password : <input type="password" id="pass">
+    <br>
+    <br>
+    <button onclick="login()">Login</button>
+
+    <script>
+        let u = document.getElementById("user");
+        let p = document.getElementById('pass');
+
+        function login()
+        {
+            if(u.value == "Krutika" && p.value== "pass@123")
+             {
+                alert("Login Successfull!!");
+                document.writeln(`${u.value}`+" Welcome to Itvedant classroom!!")
+                u.value.style.color="blue";
+                u.value.style.fontStyle='italic';
+            }
+            else
+            {
+                alert("Login Failed!!");
+                document.writeln(`${u.value}`+"Sorry!! Check your credentials!!")
+                
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

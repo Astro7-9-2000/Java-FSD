@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector Demo</title>
+</head>
+
+<body>
+    <p class="para">This is para-1</p>
+    <p class="para">This is para-2</p>
+    <p class="para">This is para-3</p>
+
+    <script>
+        let paragraphs = document.querySelectorAll(`.para`);
+        paragraphs.forEach(p1 => {
+            p1.style.color = 'blue';
+            p1.style.fontSize = '35px';
+            p1.style.fontStyle = 'italic';
+        })
+    </script>
+</body>
+
+</html>

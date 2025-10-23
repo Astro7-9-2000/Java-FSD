@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onekeyUp-Demo</title>
+</head>
+<body>
+    Enter first_name :-  <input type="text" id="fname" onkeyup="keyup()">
+    <script>
+        let fname = document.getElementById('fname');
+        function keyup()
+        {
+            fname.value = fname.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>

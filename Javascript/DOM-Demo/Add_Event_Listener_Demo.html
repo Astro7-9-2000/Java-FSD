@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event Listener Demo</title>
+</head>
+<body>
+    username : <input type = "text" id = "uname">
+    <button id = "btn1">Click me</button>
+
+    <script>
+        let u = document.getElementById("uname");
+        let btn = document.getElementById("btn1");
+        btn.addEventListener("click" , handleClick);
+        function handleClick()
+        {
+            alert (`${u.value}` + " " +"clicked the button!!");
+        }
+    </script>
+</body>
+</html>

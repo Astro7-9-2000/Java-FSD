@@ -1,0 +1,708 @@
+/*An API acts as an interface that allows proper communication between two programs.
+It takes the request from the user and sends it to the service provider and then again sends the result generated 
+from the service provider to the desired user. 
+
+Google Font API is a web service that supports high-quality open source font files that can be used on your web designs easily.*/
+
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap");
+
+/* the *, *::before, *::after selector is used to reset the margin, padding, and box-sizing 
+properties for all elements, including their pseudo-elements. 
+This is a common technique used to ensure that all elements have a consistent layout and styling.*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Familjen Grotesk", sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header/Navbar */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+
+  /* The text transform property controls the capitalization of text*/
+  text-transform: uppercase;
+  height: 100px;
+  padding: 0 30px;
+}
+
+/* Logo */
+.logo {
+  width: 210px;
+  height: auto;
+}
+
+.logo img {
+  display: black;
+  width: 100%;
+  height: auto;
+}
+
+/*-------------------------------------------Desktop Menu-------------------------------*/
+.desktop-main-menu {
+  margin-right: 50px;
+}
+
+.desktop-main-menu ul {
+  /*  Flex box container for main menu */
+  display: flex;
+}
+
+.desktop-main-menu ul li {
+  /* The position property specifies the type of positioning method used for an element.
+    An element with position:relative is positioned relative to its normal position.
+    viewport - The viewport is the user,s visible area of the web page. */
+  position: relative;
+  margin-right: 20px;
+  padding-bottom: 2px;
+}
+
+/* Menu Item bottom border */
+.desktop-main-menu ul li a:after {
+  content: "";
+  /*An element with position: absolute is positioned relative to the nearest positioned ancestor */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  /* transform: scaleX(0) is used to hide the bottom border of a menu item initially, and then scale it up 
+    to its full width when the user hovers over the menu item.*/
+  transform: scaleX(0);
+
+  /* The transition property is used to create a smooth animation between two states of an element, such as when an element is hovered, 
+    clicked, or changed in some other way.*/
+
+  /*cubic-bezier(x1 , y1 , x2 , y2) - This is the timing function that defines the speed curve of the animation.  */
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transform-origin: right center;
+}
+
+.desktop-main-menu ul li a:hover::after {
+  /* desktop-main-menu: This is a class selector that targets an HTML element with the class desktop-main-menu.
+
+    ul: This is an element selector that targets an unordered list (<ul>) element that is a descendant of the desktop-main-menu element.
+
+    li: This is an element selector that targets a list item (<li>) element that is a descendant of the ul element.
+
+    a: This is an element selector that targets an anchor (<a>) element that is a descendant of the li element.
+
+    :hover: This is a pseudo-class that targets an element when it is in a hover state (i.e., when the user is hovering over the element with their mouse).
+
+    ::after: This is a pseudo-element that targets the :after pseudo-element of the a element. 
+
+    The :after pseudo-element is used to add content after an element.*/
+
+  transform: scaleX(1);
+
+  /* transform-origin: x y; */
+  transform-origin: left center;
+  transition-duration: 0.4s;
+}
+
+/*------------------------------------------------Sections------------------------------------*/
+section {
+  position: relative;
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  /* background-size: cover; ensures that the background image:
+    Covers the entire element (width and height)
+    Maintains its original aspect ratio (no stretching or squishing)
+    Crops any excess parts of the image that don't fit within the element's boundaries */
+  background-size: cover;
+  text-transform: uppercase;
+}
+/* The purpose of this class is to provide a way to style the inner content of a section, 
+ while keeping the outer container (e.g., .section) separate.*/
+
+ .section-inner { 
+  position: absolute; 
+  bottom: 250px; 
+  left: 150px; 
+  max-width: 560px; 
+  height: 100px; 
+  width: 100%;
+  background-color: transparent;
+ }
+
+.section-inner h4 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  font-weight: 300;
+  background-color: transparent;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.section-inner h2 {
+  font-size: 50px;
+  font-weight: 700;
+  background-color: transparent;
+  margin-bottom: 20px;
+
+  /* ease-in-out is a timing function in CSS that controls the speed of an animation or transition.*/
+  animation: fadeInUp 0.5s ease-in-out 0.2s;
+  animation-fill-mode: both; /* Stop from showing at start */
+}
+
+.section-inner a {
+  animation: fadeInUp 0.5s ease-in-out 0.4s;
+}
+
+.section-inner-b{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/slideshowBG1.jpeg");
+  background-color: transparent;
+  justify-content: center;
+  animation: fadeIn 2s ease-in-out;
+  margin-bottom: 50px;
+  border: none;
+}
+
+.section-inner-b img {
+  width: 100%; 
+  height: 100%; /* Set the image height to the full section height */
+  object-fit:cover; /* Make the image cover the entire section */
+}
+
+.section-inner-b p {
+  text-align : left;
+  padding-right: 50%;
+}
+
+.section-inner-c {
+  height: 100%; 
+  width: 100%; 
+  display: flex; /* Stack elements vertically */
+  justify-content: center; 
+  align-items: center; 
+  /*padding: 20px; /* Add some padding */
+  margin-top: 60vh; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+  flex-direction: column;
+}
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  object-fit:fill;
+  border: none;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+}
+
+.triangular-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 70;
+  height: 60;
+  border-left: 74px solid #fff;
+  border-top: 37px solid transparent;
+  border-bottom: 37px solid transparent;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.triangular-button:hover {
+  border-left: 74px solid #ccc;
+}
+
+
+/*-------------------------------------------------Slideshow----------------------------------------*/
+
+
+/* Background images */
+.section-a {
+  background-image: url("../img/section-a.webp");
+}
+.section-b {
+  background-image: url("../img/NROL186.jpeg");
+}
+.section-c {
+  background-image: url("../img/GOESU.jpg");
+}
+.section-d {
+  background-image: url("../img/advancingHSF.webp");
+}
+.section-e {
+  background-image: url("../img/multplanetary.jpeg");
+}
+  
+
+.btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  min-width: 130px;
+  padding: 15px 50px;
+  margin-top: 10px;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+
+
+  /* The overflow property controls what happens when an element's content exceeds its dimensions
+    Hidden: The content is clipped, and any excess content is hidden from view. */
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* <span> is an inline element that is used to group a section of text or other inline elements together 
+.btn:hover span is used to target a <span> element that is a descendant of an element with the class btn, 
+but only when the .btn element is in a hover state.*/
+.btn:hover span {
+  color: #000;
+}
+
+.btn .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: #000;
+  z-index: -1;
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn:hover .hover {
+  transform: translateY(0);
+}
+
+.scroll-arrow {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+/*----------------------------------------Footer------------------------------------------*/
+footer {
+  position: relative;
+  padding: 55px 0;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer ul li {
+  margin-right: 30px;
+  color: #aaa;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 2.5;
+}
+
+footer ul li a {
+  color: #fff;
+  transition: color 0.6s;
+}
+
+footer ul li a:hover {
+  color: #aaa;
+}
+/*--------------------------------------HamBurger Menu--------------------------------------*/
+
+.hamburger {
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  z-index: 10;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  transition: all 0.5s;
+  transition: transform 0.3s ease-out;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  margin: 5px auto;
+  border-radius: 5px;
+}
+
+.hamburger.open {
+  transform: rotate(90deg);
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/*---------------------------------------------Overlay---------------------------------------*/
+.overlay-show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 3;
+}
+
+.stop-scrolling {
+  overflow: hidden;
+}
+
+/* Hide mobile main menu items */
+.mobile-only {
+  display: none;
+}
+
+/* Mobile menu */
+.mobile-main-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
+  z-index: 4;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%);
+  transition: transition 0.6s cubic-bezier(0.19 , 1 , 0.22 , 1);
+}
+
+/* Bring menu to right */
+.show-menu {
+  transform: translateX(0);
+}
+
+.mobile-main-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  padding: 50px;
+  width: 100%;
+}
+
+.mobile-main-menu ul li {
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-transform:uppercase;
+  border-bottom: 1px #555 dotted;
+  width: 100%;
+  text-align: right;
+  padding-bottom: 8px;
+}
+
+.mobile-main-menu ul li a {
+  color: #fff;
+  transition: color 0.6s;
+}
+
+.mobile-main-menu ul li a:hover {
+  color: #aaa;
+}
+
+/*------------------------------------------------Inner Pages---------------------------------------*/
+
+.bg-falcon-9 {
+  background-image: url('../img/falcon-9.webp');
+}
+
+.bg-falcon-heavy {
+  background-image: url('../img/falcon-heavy.webp');
+}
+
+.bg-dragon {
+  background-image: url('../img/dragon.webp');
+}
+
+.Starship {
+  background-image: url('../img/Starship.webp');
+}
+
+.HSF {
+  background-image: url('../img/HSF.webp');
+}
+
+.Rideshare {
+  background-image: url('../img/Ride.jpg');
+}
+
+.Starshield {
+  background-image: url('../img/starshield.jpg');
+}
+
+.Starlink {
+  background-image: url('../img/starlink.jpg');
+}
+
+/* .section-inner {
+  background-image: url('../img/falcon9.jpeg');
+} */
+
+.section-animate {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.section-inner-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-align: center;
+  width: 80%;
+}
+
+.section-inner-center h3 {
+  font-size: 100px;
+  margin-bottom: 15px;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.section-inner-center p {
+  font-size: 20px;
+  animation: fadeInUp 0.5s ease-in-out 0.2s;
+  animation-fill-mode: both;
+}
+
+.sectionB .section-inner-center {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+}
+
+.sectionB .section-inner-center iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.section-b1.section-inner {
+  position: relative;
+  padding-bottom: 56.25%; 
+  height: 50%; 
+}
+
+.bg-starship{
+  background-image: url('../img/starship.jpg');
+}
+
+/*-----------------------------ANIMATIONS----------------------------*/
+
+/* 0% represents the starting point of the animation (0% complete). At this point:
+
+- transform: translateY(100%); moves the element down by its own height, effectively hiding it from view.
+- opacity: 0; sets the element's opacity to 0, making it fully transparent.
+- 100% represents the ending point of the animation (100% complete). At this point:
+
+- transform: translateY(0%); moves the element back to its original position.
+- opacity: 1; sets the element's opacity to 1, making it fully visible. */
+@keyframes fadeInUp{
+  0% {
+    opacity: 0;
+    transform: translateY(140px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity: 0;  
+  }
+
+  100% {
+    opacity: 1;
+    
+  }
+}
+
+/* Media Queries */
+
+@media (max-width: 960px) {
+  /* Hide Desktop menu */
+  .desktop-main-menu {
+    display: block;
+  }
+
+  /* Show main mobile items */
+  .mobile-only {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-inner {
+    bottom: 75px;
+    left: 20px;
+  }
+
+
+  .section inner h2 {
+    font-size: 40px;
+  }
+  .logo {
+    width: 150px;
+    margin: auto;
+  }
+
+  /* launch Carousal */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+}
+
+
+
+

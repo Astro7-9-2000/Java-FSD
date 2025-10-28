@@ -1,0 +1,425 @@
+/* 1. Global & Utility Styles */
+body {
+    color: #333;
+    /* Default dark text color for better contrast */
+    line-height: 1.6;
+}
+
+/* 2. Navigation Bar */
+.custom-nav-bg {
+    background-color: #e3f2fd;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+/* 3. Hero Section (#Home) */
+
+#Home {
+    background-image: url("/Images/homepage.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+#Home h1,
+#Home p {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+#About,
+#Home-p2,
+#Home-p3 {
+    padding: 4rem 1rem;
+}
+
+#About h1,
+#About h2,
+#Home-p2 h1,
+#Home-p2 h2,
+#Home-p3 h1,
+#Home-p3 h2 {
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+}
+
+/* Paragraphs in the content sections */
+#About p,
+#Home-p2 p,
+#Home-p3 p {
+    color: #555;
+}
+
+/* Portfolio/Cards Section (#Cards) */
+#Cards {
+    background-image: url('/Images/Cute_image.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    /* Default text color for the section */
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+#Cards>p {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.intro-text-salmon {
+    color: lightsalmon;
+}
+
+#Cards .card-title,
+#Cards .card-text {
+    color: black;
+}
+
+
+/* 6. Card Component Styles */
+.card {
+    border: none;
+    transition: transform 0.3s ease;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+}
+
+/* --- Overlapping Card Styles for #Girl Section --- */
+
+.overlap-card-left,
+.overlap-card-middle,
+.overlap-card-right {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Ensure images fill the card and are centered */
+.overlap-card-left img,
+.overlap-card-middle img,
+.overlap-card-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 2. Set Z-Index Stacking Order (General) */
+.overlap-card-left {
+    z-index: 20;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.overlap-card-middle {
+    z-index: 10;
+    background-color: transparent;
+}
+
+.overlap-card-right {
+    z-index: 10;
+    background-color: lightcoral;
+}
+
+
+/* 1. Ensure Cards have Positioning for Z-Index (Specific to #Girl) */
+#Girl .card {
+    position: relative;
+    height: 850px;
+    background-color: white;
+    width: 550px;
+    height: 550px;
+}
+
+/* Ensure images fill the card and are centered */
+#Girl .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 2. Set Z-Index Stacking Order (Specific to #Girl) */
+.overlap-card-left {
+    z-index: 20;
+    opacity: 75%;
+}
+
+.overlap-card-middle {
+    z-index: 10;
+    /* Middle: Stays on top of the right card only */
+}
+
+.overlap-card-right {
+    z-index: 5;
+    /* Lowest: Stays on the bottom */
+    opacity: 65%;
+}
+
+
+/* --- Overlapping Card Styles for #Girl Section--- */
+
+/* 1. Set the Positioning Context */
+#Girl {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    overflow: hidden;
+}
+
+/* 2. Style the Middle Card (The Main Content) */
+.card.overlap-card-middle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 550px;
+    height: 550px;
+    aspect-ratio: 1/1;
+    z-index: 20;
+    overflow: hidden;
+}
+
+/* 3. Style the Overlapping Side Cards */
+.card.overlap-card-left,
+.card.overlap-card-right {
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    aspect-ratio: 1/1;
+    bottom: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific position and color for the Left Card (Grey Card) */
+.card.overlap-card-left {
+    z-index: 20;
+    background-color: lightgray !important;
+    left: 60%;
+    bottom: 100px;
+    aspect-ratio: 1/1;
+}
+
+/* Specific position and color for the Right Card */
+.card.overlap-card-right {
+    z-index: 30;
+    /* User's requested Z-index (Highest) */
+    background-color: blanchedalmond !important;
+    right: 30%;
+    top: 100px;
+    aspect-ratio: 1/1;
+    height: 550px;
+}
+
+/* Make the image in the middle card fill its container */
+.card.overlap-card-middle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+/* GIRL SECTION ENDS  */
+
+/* INTERIOR SECTION BEGINS HERE */
+
+#Interior .row {
+    position: relative;
+    overflow: visible;
+    padding-top: 90px;
+    padding-bottom: 10px;
+}
+
+/* 1. Base style for all cards in this section */
+#Interior .card {
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 350px;
+    padding: 20px;
+    background-color: #cbdfe9;
+    z-index: 1;
+}
+
+/* 2. Style for the LEFT card (Design Element) */
+#Interior .overlap-card-left {
+    z-index: 2;
+    position: relative;
+    left: 20%;
+    height: 500px;
+}
+
+/* 3. Style for the MIDDLE card (Image) */
+#Interior .overlap-card-middle {
+    height: 380px;
+    padding: 0;
+    z-index: 3;
+    position: relative;
+    left: 60%;
+    top: -50px;
+    width: 400px;
+}
+
+/* Ensure the image fills its container */
+#Interior .overlap-card-middle img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 4. Style for the RIGHT card (Text Content) */
+#Interior .overlap-card-right {
+    background-color: #e5c1e6fa !important;
+    z-index: 2;
+    padding: 40px;
+    position: relative;
+    right: 60%;
+    width: 400px;
+    height: 270px;
+}
+
+/* Media Query for smaller screens (Bootstrap's col-md-4 will stack) */
+@media (max-width: 768px) {
+    #Interior .col-md-4 {
+        margin-bottom: 20px;
+    }
+
+    #Interior .overlap-card-left,
+    #Interior .overlap-card-middle,
+    #Interior .overlap-card-right {
+
+        position: static;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: auto;
+    }
+
+    #Interior .overlap-card-middle {
+        height: 300px;
+    }
+
+    /* General Card Styling to ensure separation */
+    #Contact\ Us .card {
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transition: none;
+        width: 350px;
+        height: 450px;
+    }
+
+    #Contact\ Us .overlap-card-left img,
+    #Contact\ Us .overlap-card-right img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        opacity: 0.8;
+    }
+
+    #Contact\ Us .overlap-card-right {
+        position: abssolute;
+        z-index: 5;
+        background-color: #e5c1e6fa !important;
+        top: 50%;
+        left: 60%;
+    }
+
+    #Interior .row {
+        position: relative;
+        /* All children will be positioned relative to this row */
+        overflow: visible;
+        /* Important: Allows the content to spill outside the row bounds */
+        padding-top: 90px;
+        padding-bottom: 10px;
+    }
+
+    /* 1. Base style for all cards in this section */
+    #Interior .card {
+        border: none;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        height: 350px;
+        /* Set a fixed height for visual consistency */
+        padding: 20px;
+        background-color: #cbdfe9;
+        z-index: 1;
+    }
+
+    /* 2. Style for the LEFT card (Design Element) */
+    #Real-Time .overlap-card-left {
+        z-index: 2;
+        position: relative;
+        left: 20%;
+        height: 500px;
+    }
+
+    /* 3. Style for the MIDDLE card (Image) */
+    #Real-Time .overlap-card-middle {
+        height: 380px;
+        padding: 0;
+        z-index: 3;
+        position: relative;
+        left: 60%;
+        top: -50px;
+        width: 400px;
+    }
+
+    /* Ensure the image fills its container */
+    #Real-Time .overlap-card-middle img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* 4. Style for the RIGHT card (Text Content) */
+    #Real-Time .overlap-card-right {
+        background-color: #e5c1e6fa !important;
+        z-index: 2;
+        padding: 40px;
+        position: relative;
+        right: 60%;
+        width: 400px;
+        height: 270px;
+    }
+
+    /* Media Query for smaller screens (Bootstrap's col-md-4 will stack) */
+    @media (max-width: 768px) {
+        #Real-Time .col-md-4 {
+            margin-bottom: 20px;
+        }
+
+        #Real-Time .overlap-card-left,
+        #Real-Time .overlap-card-middle,
+        #Real-Time .overlap-card-right {
+
+            position: static;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: auto;
+        }
+
+        #Real-Time .overlap-card-middle {
+            height: 300px;
+        }
+    }
+}
